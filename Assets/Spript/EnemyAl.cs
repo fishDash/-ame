@@ -8,16 +8,23 @@ public class EnemyAl : MonoBehaviour
     public List<Transform> patrolPoints;
     public PlayerController player;
     public float viewAngle;
+    public float damage = 30;
 
     private NavMeshAgent _navMeshAgent;
     private bool _isPlayerNoticed;
+    private PlayerHealth _playerHealth;
 
     // Start is called before the first frame update
     private void Start()
     {
-        _navMeshAgent = GetComponent<NavMeshAgent>();
-
+        InitComponeatLioks();
         PickNewPatrolPoint();
+    }
+
+    private void InitComponeatLioks()
+    {
+        _navMeshAgent = GetComponent<NavMeshAgent>();
+        _playerHealth = player.GetComponent<PlayerHealth>();
     }
 
     // Update is called once per frame
@@ -25,12 +32,13 @@ public class EnemyAl : MonoBehaviour
     {
         NoticePlayerUpdate();
         ChaseUpdate();
+        AttackUpdate();
         PatrolUpdate();
     }
 
-     private void NoticePlayerUpdate()
-     {
-         var direction = player.transform.position - transform.position;
+    private void NoticePlayerUpdate()
+    {
+        var direction = player.transform.position - transform.position;
         _isPlayerNoticed = false;
         if (Vector3.Angle(transform.forward, direction) > viewAngle)
         {
@@ -43,18 +51,18 @@ public class EnemyAl : MonoBehaviour
                 }
             }
         }
-     }
+    }
 
-     private void PatrolUpdate()
-     {
+    private void PatrolUpdate()
+    {
          if (!_isPlayerNoticed)
          {
-             if (_navMeshAgent.remainingDistance == 0)
+             if (_navMeshAgent.remainingDistance == _navMeshAgent.stoppingDistance)
              {
                 PickNewPatrolPoint();
              }
          }
-     }
+    }
 
     private void PickNewPatrolPoint()
     {
@@ -66,6 +74,16 @@ public class EnemyAl : MonoBehaviour
         if (_isPlayerNoticed)
         {
             _navMeshAgent.destination = player.transform.position;
+        }
+    }
+    private void AttackUpdate()
+    {
+        if (_isPlayerNoticed)
+        {
+            if (_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
+            {
+                _playerHealth.GetComponent<PlayerHealth>().DealDamage(damage * Time.deltaTime);
+            }
         }
     }
 }
