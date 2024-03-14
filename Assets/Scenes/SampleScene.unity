@@ -476,7 +476,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -496,6 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa23ae4b415e3584a92c8000bcbb9754, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  value: 100
 --- !u!136 &1823002150
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -575,6 +576,16 @@ PrefabInstance:
     - target: {fileID: 4798711331999317083, guid: 2a8a0c084a0ee8943ad1802be7d98e67,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7953841336357391134, guid: 2a8a0c084a0ee8943ad1802be7d98e67,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7953841336357391134, guid: 2a8a0c084a0ee8943ad1802be7d98e67,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
