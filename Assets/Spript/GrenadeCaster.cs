@@ -5,6 +5,8 @@ using UnityEngine;
 public class GrenadeCaster : MonoBehaviour
 {
     public Rigidbody grenadePrefab;
+    public Transform grenadeSourceTransform;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +18,7 @@ public class GrenadeCaster : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(1))
         {
-
+            Instantiate(grenadePrefab);
         }
     }
 }
