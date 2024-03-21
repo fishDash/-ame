@@ -694,6 +694,7 @@ MonoBehaviour:
   gravity: 30
   jumpForce: 10
   speed: 50
+  animator: {fileID: 0}
 --- !u!143 &4798711331999317077
 CharacterController:
   m_ObjectHideFlags: 0
@@ -709,7 +710,7 @@ CharacterController:
   m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.01
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!114 &-8410903392627309675
@@ -741,6 +742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 100
   valueRectTransform: {fileID: 2961052289538930454}
+  animator: {fileID: 3456006038079879049}
   gameplayUI: {fileID: 3905277782977189485}
   gameOverScreen: {fileID: 3483152870083299868}
 --- !u!1 &4798711332007905564
@@ -931,6 +933,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &3456006038079879049
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5645573679229168549}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4eb55b77eb38374469bbafb7a9fad3c7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8579624128821051427
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,6 +1200,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ea9aa49ee7f8bb41a9463886303b375, type: 3}
+--- !u!1 &5645573679229168549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0ea9aa49ee7f8bb41a9463886303b375,
+    type: 3}
+  m_PrefabInstance: {fileID: 4798711333077047028}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4977264791812813087 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0ea9aa49ee7f8bb41a9463886303b375,
