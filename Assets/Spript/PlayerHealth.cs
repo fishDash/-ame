@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public float value = 100;
     public RectTransform valueRectTransform;
+    public Animator animator;
 
     public GameObject gameplayUI;
     public GameObject gameOverScreen;
@@ -34,6 +35,13 @@ public class PlayerHealth : MonoBehaviour
         DrawHealthBar();
     }
 
+    public void AddHealth(float amount)
+    {
+        value += amount;
+        value = Mathf.Clamp(value, 0, _maxValue);
+        DrawHealthBar();
+    }
+
     private void PlayerIsDead()
     {
         gameplayUI.SetActive(false);
@@ -41,10 +49,26 @@ public class PlayerHealth : MonoBehaviour
         GetComponent<PlayerController>().enabled = false;
         GetComponent<FireballCaster>().enabled = false;
         GetComponent<CameraRotation>().enabled = false;
+        animator.SetTrigger("death");
     }
 
     private void DrawHealthBar()
     {
         valueRectTransform.anchorMax = new Vector2(value / _maxValue, 1);
+    }
+}
+
+public class Aidkit: MonoBehaviour
+{
+    public float healAmount = 50;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        var playerHealth = other.gameObject.GetComponent<PlayerHealth>();
+        if (playerHealth != null)
+        {
+            playerHealth.AddHealth(healAmount);
+            Destroy(gameObject);
+        }
     }
 }
