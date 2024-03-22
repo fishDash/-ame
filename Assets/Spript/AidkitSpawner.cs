@@ -8,6 +8,8 @@ public class AidkitSpawner : MonoBehaviour
     public float dealeyMin = 3;
     public float dealeyMax = 9;
 
+    public List<Transform> spawnerPoint;
+
     private Aidkit _aidkit;
 
     private void Update()
@@ -28,6 +30,6 @@ public class AidkitSpawner : MonoBehaviour
     private void CreateAidkit()
     {
         _aidkit = Instantiate(aidkitPrefab);
-        _aidkit.tranform.position = tranform.position;
+        _aidkit.transform.position = spawnerPoint[Random.Range(0, spawnerPoint.Count)].position;
     }
 }
