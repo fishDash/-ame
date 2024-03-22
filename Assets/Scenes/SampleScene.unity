@@ -131,7 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 59416420}
   m_Layer: 0
-  m_Name: GameObject (2)
+  m_Name: Point 3
   m_TagString: Untagged
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -161,7 +161,7 @@ GameObject:
   m_Component:
   - component: {fileID: 184100206}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: Point 2
   m_TagString: Untagged
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -403,7 +403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1249779204}
   m_Layer: 0
-  m_Name: GameObject (3)
+  m_Name: Point 4
   m_TagString: Untagged
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -433,7 +433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1338192454}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Point 1
   m_TagString: Untagged
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -503,7 +503,11 @@ MonoBehaviour:
   aidkitPrefab: {fileID: 0}
   dealeyMin: 3
   dealeyMax: 9
-  spawnerPoint: []
+  spawnerPoint:
+  - {fileID: 1338192454}
+  - {fileID: 184100206}
+  - {fileID: 59416420}
+  - {fileID: 1249779204}
 --- !u!1001 &1787872306
 PrefabInstance:
   m_ObjectHideFlags: 0
