@@ -16,6 +16,7 @@ public class EnemyAI : MonoBehaviour
     private NavMeshAgent _navMeshAgent;
     private bool _isPlayerNoticed;
     private PlayerHealth _playerHealth;
+    private EnemyHealth _enemyHealth;
 
     // Start is called before the first frame update
     private void Start()
@@ -28,6 +29,7 @@ public class EnemyAI : MonoBehaviour
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _playerHealth = player.GetComponent<PlayerHealth>();
+        _enemyHealth = GetComponent<EnemyHealth>();
     }
 
     // Update is called once per frame
@@ -39,6 +41,13 @@ public class EnemyAI : MonoBehaviour
         PatrolUpdate();
     }
 
+    public void IsAlive()
+    {
+        if(_playerHealth.value > 0)
+        {
+            return;
+        }
+    }
     private void NoticePlayerUpdate()
     {
         _isPlayerNoticed = false;
