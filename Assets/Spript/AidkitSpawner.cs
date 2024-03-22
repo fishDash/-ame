@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class AidkitSpawner : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Aidkit aidkitPrefab;
+    public float dealeyMin = 3;
+    public float dealeyMax = 9;
+
+    private Aidkit _aidkit;
+
+    private void Update()
     {
-        
+        if (_aidkit != null)
+        {
+            return;
+        }
+
+        if (IsInvoking())
+        {
+            return;
+        }
+
+        Invoke("CreateAidkit", Random.Range(dealeyMin, dealeyMax));
     }
 
-    // Update is called once per frame
-    void Update()
+    private void CreateAidkit()
     {
-        
+        _aidkit = Instantiate(aidkitPrefab);
+        _aidkit.tranform.position = tranform.position;
     }
 }
