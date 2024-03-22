@@ -470,7 +470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 7005299271055084070, guid: acea1ea8b92dcd9479c134cf239b0a05,
     type: 3}
-  player: {fileID: 0}
+  player: {fileID: 4798711331850036334}
   enimesMaxCount: 5
   delay: 5
   _spawnerPoint:
@@ -707,3 +707,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a8a0c084a0ee8943ad1802be7d98e67, type: 3}
+--- !u!114 &4798711331850036334 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4798711331999317076, guid: 2a8a0c084a0ee8943ad1802be7d98e67,
+    type: 3}
+  m_PrefabInstance: {fileID: 4798711331850036333}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 261665e3158c080458680128c6cda978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
