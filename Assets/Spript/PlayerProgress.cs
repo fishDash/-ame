@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class PlayerProgress : MonoBehaviour
 {
+    public RectTransform experienceValueRectTransform;
+
+    private int _levelValue = 1;
+
+    private float _experienceCurrentValue  = 0;
+    private float _experienceTargetValue = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +21,22 @@ public class PlayerProgress : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void AddExperience(float value)
+    {
+        _experienceCurrentValue += value;
+        if (_experienceCurrentValue >= _experienceTargetValue)
+        {
+            _levelValue += 1;
+            _experienceCurrentValue = 0;
+        }
+
+        DrawUI();
+    }
+
+    private void DrawUI()
+    {
+
     }
 }
