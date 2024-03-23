@@ -31,10 +31,10 @@ public class EnemySpawner : MonoBehaviour
         enimesMaxCount++;
         Invoke("IncreaseEnemies", increaseEnemiesCountDelay);
     }
-
-    private void IsAlive()
+    
+    private bool IsAlive()
     {
-        _enemyHealth.value > 0 return;
+        return _enemyHealth.value > 0;
     }
 
     private void Update()
