@@ -102,6 +102,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 100
   animator: {fileID: 7005299271014708567}
+  explosionPrefab: {fileID: -393872598534510276, guid: b6eca1cab1d91bc44985e428d601aa56,
+    type: 3}
 --- !u!136 &7005299271055084067
 CapsuleCollider:
   m_ObjectHideFlags: 0
