@@ -8,6 +8,8 @@ public class EnemyHealth : MonoBehaviour
     public float value = 100;
     public Animator animator;
 
+    public Explosion explosionPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
