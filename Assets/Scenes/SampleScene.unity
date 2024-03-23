@@ -284,7 +284,7 @@ GameObject:
   m_Layer: 0
   m_Name: Grenade Source
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -296,7 +296,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 566709910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1061592157}
@@ -317,6 +317,8 @@ MonoBehaviour:
   grenadePrefab: {fileID: -9168497309148533688, guid: 5e287f359423fc5478a3ed90107f5603,
     type: 3}
   force: 500
+  delayMin: 1
+  delayMax: 3
 --- !u!1 &614861005
 GameObject:
   m_ObjectHideFlags: 0
