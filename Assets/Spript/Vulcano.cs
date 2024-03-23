@@ -5,7 +5,10 @@ using UnityEngine;
 public class Vulcano : MonoBehaviour
 {
    public Grenade grenadePrefab;
-   public float force = 500;
+
+   public float forceMin = 500;
+   public float forceMax = 700;
+
    public float delayMin = 1;
    public float delayMax = 3;
 
@@ -18,7 +21,10 @@ public class Vulcano : MonoBehaviour
    {
 	   var grenade = Instantiate(grenadePrefab);
        grenade.transform.position = transform.position;
-       grenade.GetComponent<Rigidbody>().AddForce(transform.forward * force);
+
+       var direction = Random.onUnitSphere;
+
+       grenade.GetComponent<Rigidbody>().AddForce(direction * Random.Range(forceMin, forceMax));
        Invoke("SpawnGrenade", Random.Range(delayMin, delayMax));
    }
 }
