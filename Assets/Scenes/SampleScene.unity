@@ -314,6 +314,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c5bd99fa71ef0b40982a1012d372f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grenadePrefab: {fileID: -9168497309148533688, guid: 5e287f359423fc5478a3ed90107f5603,
+    type: 3}
+  force: 500
 --- !u!1 &614861005
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,11 +514,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49917051d99ac4e4d80380483676d80a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemyHealth: {fileID: 0}
   enemyPrefab: {fileID: 7005299271055084070, guid: acea1ea8b92dcd9479c134cf239b0a05,
     type: 3}
   player: {fileID: 4798711331850036334}
   enimesMaxCount: 5
   delay: 5
+  increaseEnemiesCountDelay: 30
   _spawnerPoint:
   - {fileID: 1713569422}
   - {fileID: 614861006}
