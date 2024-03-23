@@ -41,5 +41,9 @@ public class EnemyHealth : MonoBehaviour
         GetComponent<EnemyAI>().enabled = false;
         GetComponent<CapsuleCollider>().enabled = false;
         GetComponent<NavMeshAgent>().enabled = false;
+
+        if (explosionPrefab == null) return;
+        var explosion = Instantiate(explosionPrefab);
+        explosion.transform.position = transform.position;
     }
 }
