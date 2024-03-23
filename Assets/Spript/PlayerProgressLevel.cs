@@ -1,18 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System;
 
-public class PlayerProgressLevel : MonoBehaviour
+[Serializable] public class PlayerProgressLevel
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public float fireballDamage;
+    public float grenadeDamage;
+    public float experienceForTheNextLevel;
 }
