@@ -41,12 +41,9 @@ public class EnemyAI : MonoBehaviour
         PatrolUpdate();
     }
 
-    public void IsAlive()
+    public bool IsAlive()
     {
-        if(_playerHealth.value > 0)
-        {
-            return;
-        }
+        return _enemyHealth.value > 0;
     }
     private void NoticePlayerUpdate()
     {
