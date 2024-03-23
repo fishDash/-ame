@@ -883,6 +883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   experienceValueRectTransform: {fileID: 5983277102013013131}
+  levelValueTMP: {fileID: 72480854433493399}
 --- !u!1 &4798711332007905564
 GameObject:
   m_ObjectHideFlags: 0
