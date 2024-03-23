@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerProgress : MonoBehaviour
 {
     public RectTransform experienceValueRectTransform;
+    public TextMeshProUGUI levelValueTMP;
 
     private int _levelValue = 1;
 
@@ -37,6 +39,6 @@ public class PlayerProgress : MonoBehaviour
 
     private void DrawUI()
     {
-
+        experienceValueRectTransform.anchorMax = new Vector2(_experienceCurrentValue / _experienceTargetValue, 1);
     }
 }
