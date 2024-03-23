@@ -45,6 +45,7 @@ public class EnemyAI : MonoBehaviour
     {
         return _enemyHealth.value > 0;
     }
+
     private void NoticePlayerUpdate()
     {
         _isPlayerNoticed = false;
