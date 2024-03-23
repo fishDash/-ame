@@ -16,7 +16,7 @@ public class PlayerProgress : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        DrawUI();
     }
 
     // Update is called once per frame
@@ -40,5 +40,6 @@ public class PlayerProgress : MonoBehaviour
     private void DrawUI()
     {
         experienceValueRectTransform.anchorMax = new Vector2(_experienceCurrentValue / _experienceTargetValue, 1);
+        levelValueTMP.text = _levelValue.ToString();
     }
 }
